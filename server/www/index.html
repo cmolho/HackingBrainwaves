@@ -5,7 +5,7 @@
 </head>
 <body>
     <div id="screen"> <p id="qbox">Question Appears Here</p> <div> <input type="radio" name="trueorfalse" value="true" checked>True<br>
-        <input type="radio" name="trueorfalse" value="ALLIGATORSALLIGATORSALLIGATORS">False<br>
+        <input type="radio" name="trueorfalse" value="false">False<br>
         </div>
         <button id="next" onclick="capture()">Capture</button>
         <!-- <button id="next" onclick="startTimer(10, timer)">Answer Next Question</button> -->
@@ -49,7 +49,8 @@ var capture = function() {
     $.ajax({
       type: "POST",
       url: "http://localhost:3000/capture",
-      data: $('input[name=trueorfalse]:checked').val()
+      contentType: "application/json",
+      data: JSON.stringify({answer: $('input[name=trueorfalse]:checked').val()})
     });
 }
 </script>

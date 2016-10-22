@@ -10,6 +10,9 @@ var prediction = google.prediction('v1.6');
 var capture = false;
 var trainingAnswer;
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
 // google.auth.getApplicationDefault(function(err, authClient) {
 // 	if (err) {
 //     	console.log('Authentication failed because of ', err);
@@ -94,7 +97,7 @@ app.get('/index', function(req, res) {
 
 app.post('/capture', function(req, res) {
   capture = true;
-  trainingAnswer = req.data;
+  trainingAnswer = req.body.answer;
   console.log("capture on");
   res.send("capture on");
 });
@@ -103,6 +106,7 @@ app.post('/dataStream', function (req, res) {
   if (capture) {
   	console.log("capture data: " + req.query.data);
   	var data = req.query.data.split(',');
+  	console.log("data: " + data + "\n trainingAnswer: " + trainingAnswer);
   	google.auth.getApplicationDefault(function(err, authClient) {
 	   if (err) {
 	     console.log('Authentication failed because of ', err);
@@ -114,7 +118,6 @@ app.post('/dataStream', function (req, res) {
 	   }
 
 	    var request = {
-	    	// TODO: Change placeholders below to appropriate parameter values for the 'insert' method:
 	    	project: "brainwaves-147216",  //The project associated with the model.
 	    	auth: authClient,  // Auth client
 	    	id: "brainwavesiot",

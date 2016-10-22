@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "brainwaves-147216",
+  "private_key_id": "5454124757d22541f716920d4cf4cf54962c669c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC2NTcoCVonE3zy\nPQi4QIe3zoWzVuve8DXVWDeQxCsdAxZzqCpWjhlG1bvACW5Ipvbf+UDn2b2Q0W0P\nI5+ryMmLVwkWltImjO6YIoN7R3CX2paOarHOUzDnZXFWAa6pyYMLmr0tz07m2Cop\nXcLwyV2qX6vKyWCnlGpGIf2W65JvDkUldG3m9q3V37W3cndEVB8hquUtaFy76k4j\nS85q/cscHex8MSkRMPAO3otPydx3nxv59J6CsAB1prgun85fr3kVd5gLOd7k4V5E\nkLO2u38pOBeVpBsXfM74+/8ABEKihoCHCYPe7X6sg5SbGTaJKeo67+9ZDoQ8riPs\nNAXOqDNrAgMBAAECggEAVVSutA1NLyetSDTVNJTj+my5qLd4Vzvfuj5KJ333QusD\nRL7otQhvRgEqoFDKWTP4QgQVJX+Pi5bIoGJqkKTD3oGwO+f+Gxe9VXo0YTOfwz4X\nbDMDekDzkiqr3T+EcPdya6jYF/ASX4G0nRLQDLwBJZ0QczPEFDcpXhblEBzawy78\niwH4oiUJD6WBaOuT4Zv6JuNV0arHG/ogQNiRXtFb4do1dQux8ncM7Qkd/Kegg2DX\nRG9g4ZWQlIvtE+tukLd6Aw5Q2I0/jdAnXL2o0Jk+6mVdzJoHQ/C1PDbzRAG7bjSI\nTaKPEwtzP9rJ5YoJxSUBzniZ2tKRDAQqTevQn7L34QKBgQDse9cPSiqTcEex0r6D\nSZOzlPTnYtnzlf5sCHMW4Svpxy+6w09iZSPQOCcRAy0HO07P+It4bkPRcyxyeGmi\neEVGboR9vY967mlU8gDSeD4He44CK9MQV8uxFFmjTjjqbUSHzgTADNHiXkzgtjCi\nC+VraVitcc2cLW1DoNScwPIchQKBgQDFPrJCHm9TPjQD6BB/VHfKC5SwPtt5eS/g\naXHWidSX8CeNYOztjmHwqWRG1my+/YMFZa4ZwrHDKRNDz7J/WG8lc8zeZDxBgX+A\nBfNKdFr5MwzfP2EblMDBKuWOncSLBYO16RJnn5L3hx1/nEa0dWdnEW3RI4FEJ8QC\neZBVcJJLLwKBgQDnizm+1rdpNP59tgKjOV9M7gP8qmUMg0hhLsTBGieM9mJdUu5f\nQPgX32Mg3SMxeXhpWMn2WMA+S66xRgTn9yqdE4jWNMxPaS/o5Cq56NGTMf6RUaeO\n0Oe3sl0x8Fz565K2BZnRELxQEFTlkH19rHgs+zDAYjUXPcNF/CswcBqeoQKBgQCu\nHZZF/4/OL87C1AwcGnhUBr0Oh64+INg+hVZUR/8+0GRZzQHZAiM6yo0Waxo7zpXm\nIcf6PX+mA5BZ//JVr78NlJd4iYsXWDUw0g/d3bCg4ouuVshmDH3LBw71QhfJkOif\noEr65kZZ8w/7IfzYN/s7ZItIXssxWtkQRjc+9MxvSQKBgAOt3pJyhaeE94iQfK8t\ngTNLRefxs0mkp4LU2mEK+nv9rwQIBmyCdbApcU+uZYzI5H4qseUPKpl+MtYvCDxX\nliimetZNWoyE0Dz/rrskvC50H1NFDM2MZfn1Box5PR4byqPaj4gstkfR+oT/H/A2\nwIcpTjHtdIMi311AnpJmmrLR\n-----END PRIVATE KEY-----\n",
+  "client_email": "brainwaves@brainwaves-147216.iam.gserviceaccount.com",
+  "client_id": "103391494855643216960",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/brainwaves%40brainwaves-147216.iam.gserviceaccount.com"
+}
