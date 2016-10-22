@@ -35,17 +35,6 @@ void setup() {
   } else {
     Serial.println("Server connection error");
   }
-
-//   Serial.println("\nStarting connection to server...");
-////   if you get a connection, report back via serial:
-//  if (client.connect(server, 3000)) {
-//    Serial.println("connected to server");
-//    // Make a HTTP request:
-//    client.println("POST /test?id=1 HTTP/1.1");
-//    client.println("Host:192.168.60.64:3000");
-//    client.println("Connection: close");
-//    client.println();
-//  }
 }
 
 void loop() {
@@ -57,7 +46,7 @@ void loop() {
     String data = String(brain.readCSV());
 
     Serial.println("\nStarting connection to server...");
-    client.println("POST /test?data="+data+" HTTP/1.1");
+    client.println("POST /dataStream?data="+data+" HTTP/1.1");
     client.println("Host:192.168.60.64:3000");
     client.println();
     }
