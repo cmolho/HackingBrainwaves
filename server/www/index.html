@@ -6,8 +6,9 @@
 <body>
     <div id="screen">
         <p id="qbox">Question Appears Here</p>
-        <button id="next" onclick="startTimer(10, timer)">Answer Next Question</button>
-        <p id="timer">Timer</p>
+        <button id="next" onclick="capture">Capture</button>
+        <!-- <button id="next" onclick="startTimer(10, timer)">Answer Next Question</button> -->
+        <!-- <p id="timer">Timer</p> -->
     </div>
 </body>
 </html>
@@ -39,6 +40,14 @@ var toggleRecording = function() {
     $.ajax({
       type: "POST",
       url: "http://localhost:3000/toggleRecording",
+      data: ""
+    });
+}
+
+var capture = function() {
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:3000/capture",
       data: ""
     });
 }
