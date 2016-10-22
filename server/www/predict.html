@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head> <link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="screen"> 
+        <p id="qbox">Question Appears Here</p> 
+        <button id="next" onclick="predict()">Predict</button>
+    </div>
+</body>
+</html>
+
+<script>
+
+var predict = function() {
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:3000/predict",
+      data: ""
+    });
+}
+</script>
