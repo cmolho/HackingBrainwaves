@@ -13,12 +13,13 @@ app.get('/', function (req, res) {
 app.get('/index', function(req, res) {
   console.log('GET /index');
   res.sendFile(__dirname + '/www/index.html');
-})
+});
 
 app.post('/toggleRecording', function(req, res) {
   recording = !recording;
+  console.log("Recording set to " + recording);
   res.send("Recording set to " + recording);
-})
+});
 
 app.post('/dataStream', function (req, res) {
   console.log(req.query);

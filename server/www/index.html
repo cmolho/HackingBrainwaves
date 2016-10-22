@@ -37,10 +37,8 @@ var timer = $("#timer");
 var toggleRecording = function() {
     $.ajax({
       type: "POST",
-      url: "192.168.60.64:3000/toggleRecording",
-      data: "",
-      success: Null,
-      dataType: Null
+      url: "http://localhost:3000/toggleRecording",
+      data: ""
     });
 }
 </script>
