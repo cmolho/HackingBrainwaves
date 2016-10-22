@@ -9,6 +9,7 @@ var prediction = google.prediction('v1.6');
 
 var capture = false;
 var trainingAnswer;
+var instances = [];
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -102,11 +103,7 @@ app.post('/capture', function(req, res) {
   res.send("capture on");
 });
 
-app.post('/dataStream', function (req, res) {
-  if (capture) {
-  	console.log("capture data: " + req.query.data);
-  	var data = req.query.data.split(',');
-  	console.log("data: " + data + "\n trainingAnswer: " + trainingAnswer);
+app.post('/submit', function(req, res) {
   	google.auth.getApplicationDefault(function(err, authClient) {
 	   if (err) {
 	     console.log('Authentication failed because of ', err);
@@ -121,7 +118,7 @@ app.post('/dataStream', function (req, res) {
 	    	project: "brainwaves-147216",  //The project associated with the model.
 	    	auth: authClient,  // Auth client
 	    	id: "brainwavesiot",
-	 		resource: {output: trainingAnswer, csvInstance: data}
+	 		resource: instances
 		};
 
 	   prediction.trainedmodels.update(request, function(err, result) {
@@ -132,6 +129,13 @@ app.post('/dataStream', function (req, res) {
 	     }
 	   });
 	 });
+});
+
+app.post('/dataStream', function (req, res) {
+  if (capture) {
+  	console.log("capture data: " + req.query.data);
+  	var data = req.query.data.split(',');
+    instances.push({output: trainingAnswer, csvInstance: data});
   	capture = false;
   	console.log("capture off");
   }

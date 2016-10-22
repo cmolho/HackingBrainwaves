@@ -10,6 +10,7 @@
         <button id="next" onclick="capture()">Capture</button>
         <!-- <button id="next" onclick="startTimer(10, timer)">Answer Next Question</button> -->
         <!-- <p id="timer">Timer</p> -->
+    <button id="submit" onclick="submit()">Submit Training Data</button>
     </div>
 </body>
 </html>
@@ -41,6 +42,14 @@ var toggleRecording = function() {
     $.ajax({
       type: "POST",
       url: "http://localhost:3000/toggleRecording",
+      data: ""
+    });
+}
+
+var submit = function() {
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:3000/submit",
       data: ""
     });
 }
