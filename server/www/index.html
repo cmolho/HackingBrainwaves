@@ -7,7 +7,7 @@
 <body>
     <div id="screen">
         <p id="qbox">Question Appears Here</p>
-        <button onclick="startTimer(10, timer)">Answer Next Question</button>
+        <button id="next" onclick="startTimer(10, timer)">Answer Next Question</button>
         <p id="timer">Timer</p>
     </div>
 </body>
@@ -15,6 +15,7 @@
 
 <script>
 function startTimer(duration, display) {
+    toggleRecording();
     var timer = duration, minutes, seconds;
     var interval = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
@@ -26,19 +27,20 @@ function startTimer(duration, display) {
         display.text(minutes + ":" + seconds);
 
         if (--timer < 0) {
-            timer = duration;
             clearInterval(interval);
-            $.ajax({
-              type: "POST",
-              url: "192.168.60.64:3000/toggleRecording",
-              data: "",
-              success: Null,
-              dataType: Null
-            });
-            
+            toggleRecording();
         }
     }, 1000);
 }
 
 var timer = $("#timer");    
+var toggleRecording = function() {
+    $.ajax({
+      type: "POST",
+      url: "192.168.60.64:3000/toggleRecording",
+      data: "",
+      success: Null,
+      dataType: Null
+    });
+}
 </script>
